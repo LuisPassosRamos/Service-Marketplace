@@ -94,7 +94,7 @@ Criar uma plataforma web que conecte prestadores de serviços (freelancers e emp
 - **Spring WebSocket**: Implementação de chat em tempo real.
 
 **Frontend:**
-- **ReactJS** ou **Thymeleaf**: Framework para interface do usuário.
+- **ReactJS**: Framework para interface do usuário.
 - **Bootstrap** ou **Tailwind CSS**: Para estilização responsiva.
 
 **Ferramentas Complementares:**
@@ -138,10 +138,12 @@ Criar uma plataforma web que conecte prestadores de serviços (freelancers e emp
 
 ---
 
-### **Próximos Passos**
+### **Feito**
 1. **Mapeamento de Funcionalidades**: Criar um backlog detalhado das tarefas.
-2. **Criação do Banco de Dados**: Modelar o banco usando MySQL Workbench.
-3. **Configuração Inicial do Projeto**: Criar um projeto Maven com as dependências principais.
+2. **Configuração Inicial do Projeto**: Criar um projeto Maven com as dependências principais.
+### **No processo**
+3. **Criação do Banco de Dados**: Modelar o banco usando MySQL Workbench.
+### **Próximos Passos**
 4. **Desenvolvimento do Backend**: Criar endpoints e implementar as regras de negócio.
 5. **Desenvolvimento do Frontend**: Construir as telas responsivas.
 6. **Testes**: Realizar testes unitários e de integração.

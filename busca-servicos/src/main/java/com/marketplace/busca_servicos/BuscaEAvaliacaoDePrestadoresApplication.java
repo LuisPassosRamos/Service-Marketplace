@@ -9,5 +9,4 @@ public class BuscaEAvaliacaoDePrestadoresApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BuscaEAvaliacaoDePrestadoresApplication.class, args);
 	}
-
 }
