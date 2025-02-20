@@ -1,1 +1,6 @@
+com\marketplace\busca_servicos\model\Servico.class
+com\marketplace\busca_servicos\model\Usuario.class
+com\marketplace\busca_servicos\model\Avaliacao.class
+com\marketplace\busca_servicos\model\Mensagem.class
+com\marketplace\busca_servicos\model\TipoUsuario.class
 com\marketplace\busca_servicos\BuscaEAvaliacaoDePrestadoresApplication.class

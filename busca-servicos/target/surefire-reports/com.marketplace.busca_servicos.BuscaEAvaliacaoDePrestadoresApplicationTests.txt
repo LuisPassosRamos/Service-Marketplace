@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.marketplace.busca_servicos.BuscaEAvaliacaoDePrestadoresApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.52 s -- in com.marketplace.busca_servicos.BuscaEAvaliacaoDePrestadoresApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.08 s -- in com.marketplace.busca_servicos.BuscaEAvaliacaoDePrestadoresApplicationTests
