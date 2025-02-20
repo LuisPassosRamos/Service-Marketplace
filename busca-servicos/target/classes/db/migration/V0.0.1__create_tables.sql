@@ -26,10 +26,10 @@ DROP TABLE IF EXISTS `Avaliacao`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Avaliacao` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `nota` int DEFAULT NULL,
-  `comentario` varchar(150) DEFAULT NULL,
-  `servico` bigint DEFAULT NULL,
-  `cliente` bigint DEFAULT NULL,
+  `nota` int NOT NULL,
+  `comentario` varchar(150) NOT NULL,
+  `servico` bigint NOT NULL,
+  `cliente` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `servico` (`servico`),
   KEY `cliente` (`cliente`),
@@ -56,10 +56,10 @@ DROP TABLE IF EXISTS `Mensagem`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Mensagem` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `conteudo` text,
-  `dataHora` timestamp NULL DEFAULT NULL,
-  `remetente` bigint DEFAULT NULL,
-  `destinatario` bigint DEFAULT NULL,
+  `conteudo` text NOT NULL,
+  `dataHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `remetente` bigint NOT NULL,
+  `destinatario` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `remetente` (`remetente`),
   KEY `destinatario` (`destinatario`),
@@ -86,11 +86,11 @@ DROP TABLE IF EXISTS `Servico`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Servico` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(150) DEFAULT NULL,
-  `descricao` varchar(10000) DEFAULT NULL,
-  `categoria` varchar(100) DEFAULT NULL,
-  `valorEstimado` decimal(10,0) DEFAULT NULL,
-  `prestador` bigint DEFAULT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `descricao` varchar(10000) NOT NULL,
+  `categoria` varchar(100) NOT NULL,
+  `valorEstimado` decimal(10,2) NOT NULL,
+  `prestador` bigint NOT NULL,
   PRIMARY KEY (`id`),
   KEY `prestador` (`prestador`),
   CONSTRAINT `Servico_ibfk_1` FOREIGN KEY (`prestador`) REFERENCES `Usuario` (`id`)
@@ -115,10 +115,10 @@ DROP TABLE IF EXISTS `Usuario`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Usuario` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `nome` varchar(150) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `senha` varchar(100) DEFAULT NULL,
-  `tipo` enum('CLIENTE','PRESTADOR') DEFAULT NULL,
+  `nome` varchar(150) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `tipo` enum('CLIENTE','PRESTADOR') NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -131,38 +131,6 @@ CREATE TABLE `Usuario` (
 LOCK TABLES `Usuario` WRITE;
 /*!40000 ALTER TABLE `Usuario` DISABLE KEYS */;
 /*!40000 ALTER TABLE `Usuario` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `flyway_schema_history`
---
-
-DROP TABLE IF EXISTS `flyway_schema_history`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `flyway_schema_history` (
-  `installed_rank` int NOT NULL,
-  `version` varchar(50) DEFAULT NULL,
-  `description` varchar(200) NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `script` varchar(1000) NOT NULL,
-  `checksum` int DEFAULT NULL,
-  `installed_by` varchar(100) NOT NULL,
-  `installed_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `execution_time` int NOT NULL,
-  `success` tinyint(1) NOT NULL,
-  PRIMARY KEY (`installed_rank`),
-  KEY `flyway_schema_history_s_idx` (`success`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `flyway_schema_history`
---
-
-LOCK TABLES `flyway_schema_history` WRITE;
-/*!40000 ALTER TABLE `flyway_schema_history` DISABLE KEYS */;
-/*!40000 ALTER TABLE `flyway_schema_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -182,4 +150,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-18 16:57:46
+-- Dump completed on 2025-02-19  1:31:15
