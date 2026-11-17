@@ -1,3 +1,11 @@
+# Marketplace de serviços — protótipo histórico
+
+> **Status:** protótipo interrompido, preservado como registro de aprendizado. Não é um produto em uso nem o TCC atual. Os requisitos abaixo descrevem a proposta original; não representam uma lista de funcionalidades entregues.
+
+O código disponível contém a estrutura Spring Boot, modelos e migrações iniciais. O TCC atual é o [LogicGates](https://github.com/LuisPassosRamos/LogicGatesMod). Veja os projetos atuais no [portfólio](https://luispassosramos.github.io/LuisPortifolio/).
+
+---
+
 ### Definição do Projeto
 
 **Nome Provisório:** Marketplace de Serviços
